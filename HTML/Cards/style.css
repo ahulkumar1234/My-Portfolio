@@ -29,6 +29,9 @@ h2{
     margin: 1%;
     padding: 1%;
 }
+h2:hover{
+    color: brown;
+}
 #card1{
     z-index: 4;
 }
