@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/6a9517d3c1.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="logo.png" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fa-solid fa-square-xmark" onclick="closemenu()"></i>
+                </ul>
+                    <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <p>UI/UX Designer</p>
+                <h1>Hi, I am <span> Rahul</span> <br>From Jamshedpur, Jharkhand</h1>
+            </div>
+        </div>
+    </div>
+    <!-- -----------------------About---------------------------------- -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col1">
+                    <img src="mypic.jpg" alt="">
+                </div>
+                <div class="about-col2">
+                    <h1 class="subtitle">About Me</h1>
+                    <p>Hi, I'm Rahul, a passionate web developer focused on building clean, user-friendly websites. With a strong foundation in HTML, CSS, JavaScript, and React, I love creating dynamic, interactive web experiences. I’m always eager to learn new technologies and improve my skills.
+                    </p>
+                    <div class="tab-title">
+                        <p class="tab-links active-link" onclick="opentab('Skills')">Skills</p>
+                        <p class="tab-links"onclick="opentab('Experience')">Experience</p>
+                        <p class="tab-links"onclick="opentab('Education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>UI/UX</span><br>Designing Web/App interfaces</li>
+                            <li><span>Web Development</span><br>Web App interfaces</li>
+                            <li><span>Programming Languages</span><br>C,C++,Java,HTML,CSS,JavaScript,PHP </li>
+                            <li><span>Frontend/Backend Framework</span><br>React, Node Js</li>
+
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="Experience" >
+                        <ul>
+                            <li><span>Jan 2024 - May 2024</span><br>Business Development Manager at ICICI Bank</li>
+                            <li><span>Sep 2023 - Dec 2023</span><br>Sales Manager at IDFC First Bank.</li>
+                            <li><span>Aug 2021 - Aug 2023</span><br>Sales Executive at Bajaj Finserv Ltd.</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="Education" >
+                        <ul>
+                            <li><span>Jac Board 2017</span><br>Matriculation 71%</li>
+                            <li><span>Isc 2017-2019</span><br>Math Science 55%</li>
+                            <li><span>Kolhan University Chaibasa,2019-2022 </span><br>Bsc Physics 7 CGPA</li>
+                            <li><span>Arka Jain University, Jharkhand, Pursuing</span><br>MCA</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- --------------------------Services------------------------------ -->
+     <div id="services">
+        <div class="container">
+            <h1 class="subtitle">My Services</h1>
+            <div class="serviceslist">
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Web Design</h2>
+                    <p>I create modern, clean, and responsive websites that look great on any device. Whether you need a personal portfolio, a business website, or an e-commerce store, I will design it to fit your needs and goals.</p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-crop-simple"></i>
+                    <h2>UI/UX Design</h2>
+                    <p>I focus on creating user-friendly designs that are easy to navigate and enjoyable to use. From wireframes to high-fidelity designs, I ensure your website or app delivers a great user experience.</p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-brands fa-app-store-ios"></i>
+                    <h2>App Design</h2>
+                    <p>I design beautiful and functional apps for both iOS and Android. From icons to user interfaces, I focus on making your app intuitive and visually appealing.</p>
+                    <a href="#">Learn more</a>
+                </div>
+            </div>
+        </div>
+     </div>
+     <!-- --------------------------portfolio------------------------------ -->
+      <div id="portfolio">
+        <div class="container">
+            <h1 class="subtitle">Portfolio</h1>
+            <div class="worklist">
+                <div class="work">
+                    <img src="pic1.0" alt="">
+                    <div class="layer">
+                        <h3>Social Media App</h3>
+                        <p>For this project, I designed a social media app that focuses on connecting people through easy navigation and engaging user experiences. I paid special attention to user profiles, feeds, and messaging features, ensuring an intuitive interface that’s both functional and visually appealing.</p>
+                        <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="pic2.webp" alt="">
+                    <div class="layer">
+                        <h3>Online Shopping App</h3>
+                        <p>I designed a seamless and visually appealing shopping experience for an online store. The app features a clean and modern design, easy-to-navigate product pages, and a smooth checkout process. The goal was to make online shopping enjoyable and user-friendly.</p>
+                        <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="pic3.webp" alt="">
+                    <div class="layer">
+                        <h3>Music App</h3>
+                        <p>This music app is all about delivering a simple, yet engaging experience for music lovers. I focused on easy-to-use controls for playing, discovering, and managing music. The design was aimed at providing a visually pleasing, minimalistic interface while keeping the user’s journey through the app as smooth as possible.</p>
+                        <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="btn">See More</a>
+        </div>
+      </div>
+      <!-- -----------------------contact------------------------------- -->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="subtitle">Contact Me</h1>
+                    <p><i class="fa-solid fa-paper-plane"></i>rahulkumar8340527941@gmail.com</p>
+                    <p><i class="fa-solid fa-phone"></i>8340527941</p>
+                    <div class="socialicons">
+                    <a href="https://www.facebook.com/share/12KkzYKPGk3/" target="_blank" ><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/rahuliftt?igsh=cGpkajlsb3g0MGI4" target="_blank" ><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/rahul-kumar-3990b618b/" target="_blank" ><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://github.com/ahulkumar1234" target="_blank"><i class="fa-brands fa-github"></i></a>
+                   </div>
+                   <a href="Rahul CV  (1).pdf" download class="btn btn2">Download Resume</a>
+                </div>
+                <div class="contact-right"> 
+                    <form name="submit-to-google-sheet">
+                        <input type="text"name= "Name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
+
+            </div>
+        </div>
+        <div class="copyright">
+            <p> Copyright © Rahul 2025. <i class="fa-solid fa-heart"></i> All Rights Reserved.</p>
+        </div>
+    </div>
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab")
+        }
+    </script>
+    <script>
+        var sidemenu = document.getElementById("sidemenu");
+
+        function openmenu(){
+            sidemenu.style.right = "0";
+        }
+        function closemenu(){
+            sidemenu.style.right = "-200px";
+        }
+    </script>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbxa24MLv0c9zmPCgeGLKj64xu2uihW3PACZ8u3HJDw6jFp5Plndr-jkjOSGnUuAnj35/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg = document.getElementById("msg")
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+                msg.innerHTML = "Message sent successfully"
+                setTimeout(function(){
+                    msg.innerHTML = ""
+                },5000)
+                form.reset()
+            })
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
+</body>
+</html>
