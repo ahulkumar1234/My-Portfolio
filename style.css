@@ -183,7 +183,8 @@ span {
     margin-top: 5rem;
     border-radius: 10px;
     height: 400px;
-    object-fit: cover;
+    width: 100%;
+    object-fit: contain;
 }
 
 .carousel-control-next {
@@ -345,6 +346,22 @@ span {
     background-color: #5031ae;
 }
 
+.seemore {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.seemore button {
+    padding: 7px 20px;
+    background-color: transparent;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
 
 
 /*----------------------------contactsection------------------------------- */
@@ -557,7 +574,7 @@ span {
     }
 
     .brandname p {
-        font-size: 0.9rem;
+        font-size: 0.8rem;
         margin-bottom: 0.5rem;
     }
 
