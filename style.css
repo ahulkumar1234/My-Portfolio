@@ -5,7 +5,9 @@
     font-family: 'Poppins', sans-serif;
 
 }
-
+html{
+    scroll-behavior: smooth;
+}
 :root {
     --primary-color: #673de6;
     --secondary-color: rgb(67, 67, 67);
@@ -112,13 +114,26 @@ span {
     left: 8rem;
 }
 
-/* .modebtn i {
-    color: var(--primary-color);
-    font-size: 1.8rem;
+.modebtn {
     display: flex;
     justify-content: center;
     align-items: center;
-} */
+    padding-left: 2rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--primary-color);
+}
+
+/* Dark mode style */
+.dark-mode {
+    background: #2d2544;
+}
+
+/*: light mode default */
+body, h4 {
+    color: black;
+    /* transition: 0.3s ease; */
+}
 
 /*---------------------------- Herosection------------------------------- */
 
@@ -350,6 +365,7 @@ span {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 2rem;
 }
 
 .seemore button {
@@ -363,6 +379,10 @@ span {
     font-size: 0.9rem;
 }
 
+.seemore button:hover {
+    background-color: #ebe6fb;
+    color: var(--primary-color);
+}
 
 /*----------------------------contactsection------------------------------- */
 .contactitem {
@@ -484,7 +504,24 @@ span {
     margin-bottom: 0.5rem;
 }
 
+/*------------------ scrollbar style------------------- */
 
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--secondary-color);
+}
+
+
+
+/*------------------ Responsive style------------------- */
 
 
 @media (max-width: 576px) {

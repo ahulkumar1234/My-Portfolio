@@ -1,13 +1,13 @@
-// const roles = ["Web Developer", "Designer", "Freelancer", "Content Creator"];
-// let index = 0;
+let mode = document.querySelector(".modebtn");
+let body = document.querySelector("body");
 
-// function rotateText() {
-//   document.getElementById("autoText").innerText = roles[index];
-//   index = (index + 1) % roles.length;
-// }
+mode.addEventListener("click", () => {
+  body.classList.toggle("dark-mode");
+});
 
-// // Change every 2 seconds
-// setInterval(rotateText, 2000);
 
-// // Start immediately
-// rotateText();
+AOS.init({
+  duration: 1000,      // Animation duration in ms
+  once: true,          // Animate only once while scrolling
+  offset: 120,         // Offset (in px) from the original trigger point
+});
