@@ -5,9 +5,11 @@
     font-family: 'Poppins', sans-serif;
 
 }
-html{
+
+html {
     scroll-behavior: smooth;
 }
+
 :root {
     --primary-color: #673de6;
     --secondary-color: rgb(67, 67, 67);
@@ -130,7 +132,8 @@ span {
 }
 
 /*: light mode default */
-body, h4 {
+body,
+h4 {
     color: black;
     /* transition: 0.3s ease; */
 }
@@ -613,6 +616,19 @@ body, h4 {
     .brandname p {
         font-size: 0.8rem;
         margin-bottom: 0.5rem;
+    }
+
+    ::-webkit-scrollbar {
+        width: 5px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: var(--primary-color);
+        border-radius: 10px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        background: var(--secondary-color);
     }
 
 }
