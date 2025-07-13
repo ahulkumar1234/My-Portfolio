@@ -3,11 +3,14 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
-
 }
 
 html {
     scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: hidden;
 }
 
 :root {
@@ -15,6 +18,30 @@ html {
     --secondary-color: rgb(67, 67, 67);
     --optional-color: linear-gradient(to right, #f6f4fe, #e5ddfc);
     --body-color: linear-gradient(45deg, #f6f4fe, #e8e3f7);
+}
+
+.dot {
+    width: 20px;
+    height: 20px;
+    background-color: var(--primary-color);
+    pointer-events: none;
+    border-radius: 50%;
+    opacity: 0.8;
+    position: absolute;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
+    /* z-index: 10000; */
+}
+
+.scndot {
+    width: 60px;
+    height: 60px;
+    /* background-color: var(--primary-color); */
+    pointer-events: none;
+    border: 1px solid black;
+    border-radius: 50%;
+    position: absolute;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
+    /* z-index: 10000; */
 }
 
 /*---------------------------- Navsection------------------------------- */
@@ -30,7 +57,7 @@ body {
     position: fixed;
     top: 0;
     z-index: 999;
-    background: var(--body-color)
+    background: var(--body-color);
 }
 
 span {
@@ -126,17 +153,7 @@ span {
     color: var(--primary-color);
 }
 
-/* Dark mode style */
-.dark-mode {
-    background: #2d2544;
-}
 
-/*: light mode default */
-body,
-h4 {
-    color: black;
-    /* transition: 0.3s ease; */
-}
 
 /*---------------------------- Herosection------------------------------- */
 
@@ -520,6 +537,45 @@ h4 {
 
 ::-webkit-scrollbar-thumb:hover {
     background: var(--secondary-color);
+}
+
+/*------------------ Modebtn------------------- */
+
+.darkmode {
+    background: #0f042f;
+}
+
+.maindark {
+    background: #5233ad;
+}
+
+.maindark h1 {
+    color: white;
+}
+
+.maindark span {
+    color: rgb(103, 213, 249);
+}
+
+.maindark p {
+    color: white;
+}
+
+.maindark h4 {
+    color: white;
+}
+
+.maindark i {
+    color: white;
+}
+
+.aboutdark {
+    background: #5233ad;
+
+}
+
+.contactdark {
+    background: #5233ad;
 }
 
 

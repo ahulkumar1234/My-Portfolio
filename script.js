@@ -1,9 +1,4 @@
-let mode = document.querySelector(".modebtn");
-let body = document.querySelector("body");
 
-mode.addEventListener("click", () => {
-  body.classList.toggle("dark-mode");
-});
 
 
 AOS.init({
@@ -38,3 +33,24 @@ form.addEventListener("submit", function (e) {
     });
 });
 
+
+let mode = document.querySelector(".modebtn");
+
+mode.addEventListener("click", function () {
+  document.querySelector("body").classList.toggle("darkmode");
+  document.querySelector(".mainitems").classList.toggle("maindark")
+  document.querySelector(".aboutitems").classList.toggle("aboutdark")
+  document.querySelector(".contactitem").classList.toggle("contactdark")
+});
+
+
+let dot = document.querySelector(".dot");
+let scndot = document.querySelector(".scndot");
+
+window.addEventListener("mousemove", function (dets) {
+  dot.style.top = dets.clientY + "px"
+  dot.style.left = dets.clientX + "px"
+
+  scndot.style.top = dets.clientY + "px"
+  scndot.style.left = dets.clientX + "px"
+});
