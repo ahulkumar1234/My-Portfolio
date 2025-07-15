@@ -36,36 +36,49 @@ AOS.init({
 let form = document.querySelector("form");
 let email = document.querySelector("#email");
 let message = document.querySelector("#message");
+let names = document.querySelectorAll("input");
 
 form.addEventListener("submit", function (dets) {
   dets.preventDefault();
 
-  document.querySelector("#emailerror").textContent = ""
-  document.querySelector("#textmsg").textContent = ""
+  document.querySelector("#emailerror").textContent = "";
+  document.querySelector("#textmsg").textContent = "";
+  document.querySelector("#successmessage").textContent = "";
 
-
-  let emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
-  let messageRegex = /^[a-zA-Z0-9\s.,!?'"()\-]{10,500}$/
+  let emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  let messageRegex = /^[a-zA-Z0-9\s.,!?'"()\-]{10,500}$/;
 
   let emailans = emailRegex.test(email.value);
   let messageans = messageRegex.test(message.value);
 
-  let isvalid = true
+  let isvalid = true;
 
   if (!emailans) {
-    document.querySelector("#emailerror").textContent = "Email is incorrect"
-    emailerror.style.color = "red"
-    isvalid = false
-  }
-  if (!messageans) {
-    document.querySelector("#textmsg").textContent = "Write somthing"
-    textmsg.style.color = "red";
-    isvalid = false
+    document.querySelector("#emailerror").textContent = "Email is incorrect";
+    document.querySelector("#emailerror").style.color = "red";
+    isvalid = false;
   }
 
-  if (isvalid) {
-    document.querySelector("#successmessage").textContent = "Thank you message sent successfully!"
+  if (!messageans) {
+    document.querySelector("#textmsg").textContent = "Write something atleast 10 words";
+    document.querySelector("#textmsg").style.color = "red";
+    isvalid = false;
   }
+  if (isvalid) {
+    document.querySelector("#successmessage").textContent = "Thank you, message sent successfully!";
+    document.querySelector("#successmessage").style.color = "green";
+
+    // Clear form after 2 seconds
+    setTimeout(() => {
+      email.value = "";
+      message.value = "";
+      names.forEach((input) => {
+        input.value = "";
+      });
+      document.querySelector("#successmessage").textContent = "";
+    }, 3000);
+  }
+
 });
 
 
