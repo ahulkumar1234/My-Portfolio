@@ -7,6 +7,16 @@ AOS.init({
   offset: 120,         // Offset (in px) from the original trigger point
 });
 
+document.addEventListener('DOMContentLoaded', function () {
+  const offcanvasEl = document.getElementById('mobilemenu');
+  const bsOffcanvas = bootstrap.Offcanvas.getOrCreateInstance(offcanvasEl);
+
+  document.querySelectorAll('#mobilemenu .nav-link').forEach(link => {
+    link.addEventListener('click', () => {
+      bsOffcanvas.hide();
+    });
+  });
+});
 
 
 // const form = document.getElementById("contact-form");
