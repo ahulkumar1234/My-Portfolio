@@ -9,9 +9,6 @@ html {
     scroll-behavior: smooth;
 }
 
-body {
-    overflow-x: hidden;
-}
 
 :root {
     --primary-color: #673de6;
