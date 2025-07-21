@@ -113,3 +113,15 @@ window.addEventListener("mousemove", function (dets) {
   scndot.style.top = dets.clientY + "px"
   scndot.style.left = dets.clientX + "px"
 });
+
+
+let nav = document.querySelector("nav");
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 50) {
+    nav.classList.add("scrollblr");
+  } else {
+    nav.classList.remove("scrollblr");
+  }
+});
+
