@@ -57,16 +57,16 @@ body {
     position: fixed;
     top: 0;
     z-index: 999;
-    background: var(--body-color);
+    background: transparent;
 }
 /* navbarscroll blur */
-/* .scrollblr{
-    background-color: transparent;
+.scrollblr{
+/*     background-color: transparent; */
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     transition: 0.3s ease;
 
-} */
+}
 /* --------------------- */
 span {
     color: var(--secondary-color);
