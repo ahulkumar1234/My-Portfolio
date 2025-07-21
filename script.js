@@ -105,15 +105,27 @@ form.addEventListener("submit", function (dets) {
 // });
 
 
-let dot = document.querySelector(".dot");
-let scndot = document.querySelector(".scndot");
+// Naya dot banaya
+let dot = document.createElement("div");
+dot.classList.add("dot");
 
+// Naya scndot banaya
+let scndot = document.createElement("div");
+scndot.classList.add("scndot");
+
+// scndot ko dot ke andar daala
+dot.appendChild(scndot);
+
+// dot ko document ke body me daala
+document.body.appendChild(dot);
+
+// Mousemove event
 window.addEventListener("mousemove", function (dets) {
-  dot.style.top = dets.clientY + "px"
-  dot.style.left = dets.clientX + "px"
+  dot.style.top = dets.clientY + "px";
+  dot.style.left = dets.clientX + "px";
 
-  scndot.style.top = dets.clientY + "px"
-  scndot.style.left = dets.clientX + "px"
+  scndot.style.top = dets.clientY + "px";
+  scndot.style.left = dets.clientX + "px";
 });
 
 
