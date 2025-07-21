@@ -105,16 +105,16 @@ form.addEventListener("submit", function (dets) {
 // });
 
 
-// let dot = document.querySelector(".dot");
-// let scndot = document.querySelector(".scndot");
+let dot = document.querySelector(".dot");
+let scndot = document.querySelector(".scndot");
 
-// window.addEventListener("mousemove", function (dets) {
-//   dot.style.top = dets.clientY + "px"
-//   dot.style.left = dets.clientX + "px"
+window.addEventListener("mousemove", function (dets) {
+  dot.style.top = dets.clientY + "px"
+  dot.style.left = dets.clientX + "px"
 
-//   scndot.style.top = dets.clientY + "px"
-//   scndot.style.left = dets.clientX + "px"
-// });
+  scndot.style.top = dets.clientY + "px"
+  scndot.style.left = dets.clientX + "px"
+});
 
 
 
