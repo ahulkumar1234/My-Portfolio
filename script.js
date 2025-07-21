@@ -7,6 +7,7 @@ AOS.init({
   offset: 120,         // Offset (in px) from the original trigger point
 });
 
+
 document.addEventListener('DOMContentLoaded', function () {
   const offcanvasEl = document.getElementById('mobilemenu');
   const bsOffcanvas = bootstrap.Offcanvas.getOrCreateInstance(offcanvasEl);
@@ -93,35 +94,37 @@ form.addEventListener("submit", function (dets) {
 
 
 
-let mode = document.querySelector(".modebtn");
 
-mode.addEventListener("click", function () {
-  document.querySelector("body").classList.toggle("darkmode");
-  document.querySelector(".mainitems").classList.toggle("maindark")
-  document.querySelector(".aboutitems").classList.toggle("aboutdark")
-  document.querySelector(".contactitem").classList.toggle("contactdark")
-});
+// let mode = document.querySelector(".modebtn");
 
-
-let dot = document.querySelector(".dot");
-let scndot = document.querySelector(".scndot");
-
-window.addEventListener("mousemove", function (dets) {
-  dot.style.top = dets.clientY + "px"
-  dot.style.left = dets.clientX + "px"
-
-  scndot.style.top = dets.clientY + "px"
-  scndot.style.left = dets.clientX + "px"
-});
-
-
-// let nav = document.querySelector("nav");
-
-// window.addEventListener("scroll", () => {
-//   if (window.scrollY > 50) {
-//     nav.classList.add("scrollblr");
-//   } else {
-//     nav.classList.remove("scrollblr");
-//   }
+// mode.addEventListener("click", function () {
+//   document.querySelector("body").classList.toggle("darkmode");
+//   document.querySelector(".mainitems").classList.toggle("maindark")
+//   document.querySelector(".aboutitems").classList.toggle("aboutdark")
+//   document.querySelector(".contactitem").classList.toggle("contactdark")
 // });
 
+
+// let dot = document.querySelector(".dot");
+// let scndot = document.querySelector(".scndot");
+
+// window.addEventListener("mousemove", function (dets) {
+//   dot.style.top = dets.clientY + "px"
+//   dot.style.left = dets.clientX + "px"
+
+//   scndot.style.top = dets.clientY + "px"
+//   scndot.style.left = dets.clientX + "px"
+// });
+
+
+
+let nav = document.querySelector(".navbar");
+
+window.addEventListener("scroll",()=>{
+  if(window.scrollY > 50){
+    nav.classList.add("scrollblr");
+  }
+  else{
+    nav.classList.remove("scrollblr");
+  }
+});
