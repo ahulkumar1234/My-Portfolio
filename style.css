@@ -59,7 +59,15 @@ body {
     z-index: 999;
     background: var(--body-color);
 }
+/* navbarscroll blur */
+.scrollblr{
+    background-color: transparent;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    transition: 0.3s ease;
 
+}
+/* --------------------- */
 span {
     color: var(--secondary-color);
 }
